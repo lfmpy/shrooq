@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>سوال</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 style="color:white; text-align: center; font-weight:bold; font-size: 100px;">شروقي انا عبودي بسالك عادي نتزوج ؟  </h1>
+    <div class="buttons">
+      <button id="btn1">ايه اكيد تعال يروحي</button>
+      <button id="btn"> لا يع دز بس</button>
+    </div>
+</body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: rgb(103, 137, 228);
+  overflow: hidden;
+}
+button{
+  position: relative;
+  height: 120px;
+  width: 400px;
+  margin: 0 35px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+button:first-child:hover{
+  background: linear-gradient(90deg, #03a9f4);
+  background-size: 400%;
+}
+button:last-child:hover{
+  background: linear-gradient(90deg,#e43603);
+  background-size: 400%;
+}
+button:first-child:before,
+button:last-child:before{
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+button:first-child:hover:before,
+button:last-child:hover:before{
+  opacity: 1;
+  z-index: -1;
+}
+button:hover{
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+@keyframes glow {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+</style>
+
+<script>
+ const button = document.getElementById('btn');
+button.addEventListener('mouseover', function () {
+    button.style.left = `${Math.ceil(Math.random() * 90)}%`;
+    button.style.top = `${Math.ceil(Math.random() * 90)}%`;
+});
+button.addEventListener('click', function () {
+    alert('ليههه خلاص حزين ')
+})
+
+const button1 = document.getElementById('btn1');
+
+button1.addEventListener('click', function () {
+    alert('يلبيهههه يلا تعال نكتب عقد الزواج')
+})
+
+</script>
